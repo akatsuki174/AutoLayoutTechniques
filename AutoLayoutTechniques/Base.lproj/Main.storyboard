@@ -66,18 +66,43 @@
                                     <constraint firstItem="PXb-PY-zSw" firstAttribute="top" secondItem="K7E-Sv-LnJ" secondAttribute="top" constant="10" id="tQp-ZZ-DkS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlM-IT-5ti">
+                                <rect key="frame" x="16" y="162" width="343" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-o9-P7x">
+                                        <rect key="frame" x="148" y="10" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="toggleDistanceControls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ju0-77-i5W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Tfl-o9-P7x" firstAttribute="centerX" secondItem="TlM-IT-5ti" secondAttribute="centerX" id="5x2-sV-XhX"/>
+                                    <constraint firstItem="Tfl-o9-P7x" firstAttribute="top" secondItem="TlM-IT-5ti" secondAttribute="top" constant="10" id="ijg-Yt-e8i"/>
+                                    <constraint firstAttribute="height" constant="200" id="o3a-yI-ZEf"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="K7E-Sv-LnJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0AW-FZ-kak"/>
+                            <constraint firstItem="TlM-IT-5ti" firstAttribute="top" secondItem="K7E-Sv-LnJ" secondAttribute="bottom" constant="10" id="9Yr-fT-Hh4"/>
+                            <constraint firstItem="TlM-IT-5ti" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aOs-am-SGj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K7E-Sv-LnJ" secondAttribute="trailing" id="fDi-bS-xb7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TlM-IT-5ti" secondAttribute="trailing" id="kKv-A2-WwY"/>
                             <constraint firstItem="K7E-Sv-LnJ" firstAttribute="topMargin" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tTF-v3-hb9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="edgeConstraint" destination="nSa-9i-2OF" id="8yE-dH-qQZ"/>
+                        <outlet property="wrappingView" destination="K7E-Sv-LnJ" id="hsJ-tZ-IDp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="136.5" y="138.5"/>
         </scene>
     </scenes>
 </document>

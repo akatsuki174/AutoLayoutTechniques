@@ -9,17 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var wrappingView: UIView!
+    @IBOutlet weak var edgeConstraint: NSLayoutConstraint!
+    var zeroHeightConstraint: NSLayoutConstraint!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        wrappingView.clipsToBounds = true
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func toggleDistanceControls(_ sender: Any) {
+        if zeroHeightConstraint == nil {
+            zeroHeightConstraint = wrappingView.heightAnchor.constraint(equalToConstant: 0)
+        }
+        
+        let shouldShow = !edgeConstraint.isActive
+        
+        if shouldShow {
+            zeroHeightConstraint.isActive = false
+            edgeConstraint.isActive = true
+        } else {
+            edgeConstraint.isActive = false
+            zeroHeightConstraint.isActive = true
+        }
+        
+        UIView.animate(withDuration: 0.25) { 
+            self.view.layoutIfNeeded()
+        }
+    }
 
 }
 
