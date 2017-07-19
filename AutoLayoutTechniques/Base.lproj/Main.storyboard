@@ -45,7 +45,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="g2G-BH-gvw" firstAttribute="leading" secondItem="eKS-fN-qBz" secondAttribute="trailing" constant="20" id="R1s-rC-BOb"/>
                                             <constraint firstItem="0Fu-ZU-6Ms" firstAttribute="centerX" secondItem="PXb-PY-zSw" secondAttribute="centerX" id="RgM-Lb-9sk"/>
@@ -58,7 +58,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="PXb-PY-zSw" firstAttribute="leading" secondItem="K7E-Sv-LnJ" secondAttribute="leading" constant="10" id="KUS-UM-hGf"/>
                                     <constraint firstAttribute="trailing" secondItem="PXb-PY-zSw" secondAttribute="trailing" constant="10" id="SK3-Do-z5O"/>
@@ -77,7 +77,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.82581988859583499" blue="0.96240387227273461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Tfl-o9-P7x" firstAttribute="centerX" secondItem="TlM-IT-5ti" secondAttribute="centerX" id="5x2-sV-XhX"/>
                                     <constraint firstItem="Tfl-o9-P7x" firstAttribute="top" secondItem="TlM-IT-5ti" secondAttribute="top" constant="10" id="ijg-Yt-e8i"/>
