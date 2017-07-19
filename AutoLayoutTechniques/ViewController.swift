@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     // のでここではweakを外している。
     // 参考：https://stackoverflow.com/questions/38051879/why-weak-iboutlet-nslayoutconstraint-turns-to-nil-when-i-make-it-inactive
     @IBOutlet var edgeConstraint: NSLayoutConstraint!
-    var zeroHeightConstraint: NSLayoutConstraint!    
+    @IBOutlet var topConstraint: NSLayoutConstraint! // edgeConstraintの代わりにこちらを使っても。
+    var zeroHeightConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()

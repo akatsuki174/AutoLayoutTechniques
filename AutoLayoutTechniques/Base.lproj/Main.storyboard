@@ -96,6 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="edgeConstraint" destination="nSa-9i-2OF" id="8yE-dH-qQZ"/>
+                        <outlet property="topConstraint" destination="tQp-ZZ-DkS" id="Mhj-96-k4m"/>
                         <outlet property="wrappingView" destination="K7E-Sv-LnJ" id="hsJ-tZ-IDp"/>
                     </connections>
                 </viewController>
