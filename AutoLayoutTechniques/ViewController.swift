@@ -24,7 +24,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        wrappingView.clipsToBounds = true
         // Dispose of any resources that can be recreated.
     }
 
