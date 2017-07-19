@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var wrappingView: UIView!
-    @IBOutlet weak var edgeConstraint: NSLayoutConstraint!
-    var zeroHeightConstraint: NSLayoutConstraint!
-    
+    @IBOutlet var wrappingView: UIView!
+    // weakを付けた場合、一度isActive = falseにしてしまうと制約がnilになってしまう
+    // のでここではweakを外している。
+    // 参考：https://stackoverflow.com/questions/38051879/why-weak-iboutlet-nslayoutconstraint-turns-to-nil-when-i-make-it-inactive
+    @IBOutlet var edgeConstraint: NSLayoutConstraint!
+    var zeroHeightConstraint: NSLayoutConstraint!    
 
     override func viewDidLoad() {
         super.viewDidLoad()
