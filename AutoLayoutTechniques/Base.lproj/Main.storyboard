@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,26 +68,24 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlM-IT-5ti">
                                 <rect key="frame" x="16" y="160" width="343" height="200"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-o9-P7x">
-                                        <rect key="frame" x="148" y="10" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="toggleDistanceControls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ju0-77-i5W"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.82581988859583499" blue="0.96240387227273461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Tfl-o9-P7x" firstAttribute="centerX" secondItem="TlM-IT-5ti" secondAttribute="centerX" id="5x2-sV-XhX"/>
-                                    <constraint firstItem="Tfl-o9-P7x" firstAttribute="top" secondItem="TlM-IT-5ti" secondAttribute="top" constant="10" id="ijg-Yt-e8i"/>
                                     <constraint firstAttribute="height" constant="200" id="o3a-yI-ZEf"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-o9-P7x">
+                                <rect key="frame" x="117.5" y="605" width="139" height="30"/>
+                                <state key="normal" title="viewが移動するよ！"/>
+                                <connections>
+                                    <action selector="toggleDistanceControls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ju0-77-i5W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="K7E-Sv-LnJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0AW-FZ-kak"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tfl-o9-P7x" secondAttribute="bottomMargin" constant="40" id="3YN-Fj-oR5"/>
+                            <constraint firstItem="Tfl-o9-P7x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3t9-he-lB4"/>
                             <constraint firstItem="TlM-IT-5ti" firstAttribute="top" secondItem="K7E-Sv-LnJ" secondAttribute="bottom" id="9Yr-fT-Hh4"/>
                             <constraint firstItem="TlM-IT-5ti" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aOs-am-SGj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K7E-Sv-LnJ" secondAttribute="trailing" id="fDi-bS-xb7"/>
