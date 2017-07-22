@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hc2-LH-raZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,26 +7,41 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="ZBr-MZ-wOG">
+            <objects>
+                <navigationController id="hc2-LH-raZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0HE-c2-OQX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dfk-Ny-PeN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hu6-KZ-ARw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-662" y="138"/>
+        </scene>
+        <!--Sample-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutTechniques" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="hGj-gl-aT8"/>
+                        <viewControllerLayoutGuide type="bottom" id="nsF-ah-VcM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7E-Sv-LnJ" userLabel="wrappingView">
-                                <rect key="frame" x="16" y="20" width="343" height="140"/>
+                                <rect key="frame" x="16" y="64" width="343" height="140"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXb-PY-zSw" userLabel="innerView">
                                         <rect key="frame" x="10" y="10" width="323" height="120"/>
@@ -69,7 +84,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlM-IT-5ti">
-                                <rect key="frame" x="16" y="160" width="343" height="200"/>
+                                <rect key="frame" x="16" y="204" width="343" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6U-FH-40S">
                                         <rect key="frame" x="20" y="20" width="303" height="69.5"/>
@@ -108,25 +123,37 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-o9-P7x">
-                                <rect key="frame" x="117.5" y="605" width="139" height="30"/>
+                                <rect key="frame" x="118" y="568" width="139" height="30"/>
                                 <state key="normal" title="viewが移動するよ！"/>
                                 <connections>
                                     <action selector="toggleDistanceControls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ju0-77-i5W"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVz-G1-LFb">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="G8z-vh-b5I"/>
+                                    <tabBarItem systemItem="more" id="RjG-Af-yz6"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="K7E-Sv-LnJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0AW-FZ-kak"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tfl-o9-P7x" secondAttribute="bottomMargin" constant="40" id="3YN-Fj-oR5"/>
+                            <constraint firstItem="OVz-G1-LFb" firstAttribute="top" secondItem="Tfl-o9-P7x" secondAttribute="bottom" constant="20" id="2cb-Se-aHG"/>
+                            <constraint firstAttribute="trailing" secondItem="OVz-G1-LFb" secondAttribute="trailing" id="35j-Tk-37I"/>
                             <constraint firstItem="Tfl-o9-P7x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3t9-he-lB4"/>
                             <constraint firstItem="TlM-IT-5ti" firstAttribute="top" secondItem="K7E-Sv-LnJ" secondAttribute="bottom" id="9Yr-fT-Hh4"/>
+                            <constraint firstItem="OVz-G1-LFb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JZB-MA-liB"/>
+                            <constraint firstItem="nsF-ah-VcM" firstAttribute="top" secondItem="OVz-G1-LFb" secondAttribute="bottom" id="VnT-Vd-7G0"/>
                             <constraint firstItem="TlM-IT-5ti" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aOs-am-SGj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K7E-Sv-LnJ" secondAttribute="trailing" id="fDi-bS-xb7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TlM-IT-5ti" secondAttribute="trailing" id="kKv-A2-WwY"/>
-                            <constraint firstItem="K7E-Sv-LnJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tTF-v3-hb9"/>
+                            <constraint firstItem="K7E-Sv-LnJ" firstAttribute="top" secondItem="hGj-gl-aT8" secondAttribute="bottom" id="tTF-v3-hb9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sample" id="chJ-SR-2IR"/>
                     <connections>
                         <outlet property="edgeConstraint" destination="nSa-9i-2OF" id="8yE-dH-qQZ"/>
                         <outlet property="topConstraint" destination="tQp-ZZ-DkS" id="Mhj-96-k4m"/>
