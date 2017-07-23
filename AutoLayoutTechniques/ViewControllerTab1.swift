@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewControllerTab1: UIViewController {
     
     @IBOutlet var wrappingView: UIView!
     // weakを付けた場合、一度isActive = falseにしてしまうと制約がnilになってしまう
