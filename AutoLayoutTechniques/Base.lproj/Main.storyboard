@@ -9,6 +9,7 @@
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -154,7 +155,6 @@
         <!--Item 1-->
         <scene sceneID="Chs-qo-NlV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Afh-Pi-6pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Weh-h1-0Dq" customClass="ViewControllerTab2" customModule="AutoLayoutTechniques" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="EfG-jQ-tjX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -170,18 +170,29 @@
                                 <rect key="frame" x="67" y="120" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.95498504786760241" green="0.91766669365140652" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNR-l0-GEc" userLabel="Spacer 70%">
+                                <rect key="frame" x="0.0" y="64" width="50" height="388"/>
+                                <color key="backgroundColor" red="0.9919268024698622" green="1" blue="0.74848249836563729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="kcp-Kq-5h8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0mW-9U-X9A" firstAttribute="centerX" secondItem="EfG-jQ-tjX" secondAttribute="centerX" id="7hi-v9-HtC"/>
+                            <constraint firstItem="pNR-l0-GEc" firstAttribute="height" secondItem="u5i-An-AqP" secondAttribute="height" multiplier="70%" id="8FO-h3-fE8"/>
                             <constraint firstItem="8Ed-r2-6dL" firstAttribute="centerX" secondItem="EfG-jQ-tjX" secondAttribute="centerX" id="CWA-kb-5EB"/>
+                            <constraint firstItem="pNR-l0-GEc" firstAttribute="leading" secondItem="u5i-An-AqP" secondAttribute="leading" id="TLf-bS-8pD"/>
+                            <constraint firstItem="pNR-l0-GEc" firstAttribute="top" secondItem="u5i-An-AqP" secondAttribute="top" id="v4N-ic-N2B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u5i-An-AqP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="sUN-sa-nyN"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Afh-Pi-6pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2289" y="339"/>
+            <point key="canvasLocation" x="2288.8000000000002" y="338.68065967016497"/>
         </scene>
         <!--Item-->
         <scene sceneID="YUo-qx-8nN">
