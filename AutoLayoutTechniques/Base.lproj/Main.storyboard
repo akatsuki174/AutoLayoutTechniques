@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="401" y="12"/>
         </scene>
-        <!--Sample-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewControllerTab1" customModule="AutoLayoutTechniques" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +141,6 @@
                         <viewLayoutGuide key="safeArea" id="MR2-M9-Jjc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="fzh-kX-yHm"/>
-                    <navigationItem key="navigationItem" title="Sample" id="chJ-SR-2IR"/>
                     <connections>
                         <outlet property="edgeConstraint" destination="nSa-9i-2OF" id="8yE-dH-qQZ"/>
                         <outlet property="topConstraint" destination="tQp-ZZ-DkS" id="Mhj-96-k4m"/>
