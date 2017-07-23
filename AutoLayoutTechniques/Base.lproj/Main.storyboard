@@ -120,7 +120,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfl-o9-P7x">
-                                <rect key="frame" x="118" y="519" width="139" height="30"/>
+                                <rect key="frame" x="118" y="558" width="139" height="30"/>
                                 <state key="normal" title="viewが移動するよ！"/>
                                 <connections>
                                     <action selector="toggleDistanceControls:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ju0-77-i5W"/>
@@ -135,7 +135,7 @@
                             <constraint firstItem="TlM-IT-5ti" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aOs-am-SGj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K7E-Sv-LnJ" secondAttribute="trailing" id="fDi-bS-xb7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TlM-IT-5ti" secondAttribute="trailing" id="kKv-A2-WwY"/>
-                            <constraint firstItem="MR2-M9-Jjc" firstAttribute="bottom" secondItem="Tfl-o9-P7x" secondAttribute="bottom" constant="69" id="ppa-Tk-1t7"/>
+                            <constraint firstItem="MR2-M9-Jjc" firstAttribute="bottom" secondItem="Tfl-o9-P7x" secondAttribute="bottom" constant="30" id="ppa-Tk-1t7"/>
                             <constraint firstItem="K7E-Sv-LnJ" firstAttribute="top" secondItem="MR2-M9-Jjc" secondAttribute="top" id="tTF-v3-hb9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MR2-M9-Jjc"/>
