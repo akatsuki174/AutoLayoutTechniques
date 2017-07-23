@@ -25,20 +25,20 @@ class ViewControllerTab2: UIViewController {
         NSLayoutConstraint.activate([
             sampleView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
             sampleView.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
-            ])
+        ])
         
         if #available(iOS 11, *) {
             let guide = view.safeAreaLayoutGuide
             NSLayoutConstraint.activate([
                 sampleView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
                 guide.bottomAnchor.constraintEqualToSystemSpacingBelow(sampleView.bottomAnchor, multiplier: 1.0)
-                ])
+            ])
         } else {
             let standardSpacing: CGFloat = 8.0
             NSLayoutConstraint.activate([
                 sampleView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: standardSpacing),
                 bottomLayoutGuide.topAnchor.constraint(equalTo: sampleView.bottomAnchor, constant: standardSpacing)
-                ])
+            ])
         }
     }
     
