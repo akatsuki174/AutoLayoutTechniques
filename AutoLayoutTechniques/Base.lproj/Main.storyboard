@@ -7,10 +7,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -176,39 +178,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-Lg-8li">
-                                <rect key="frame" x="20" y="84" width="374" height="583"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-Lg-8li">
+                                <rect key="frame" x="20" y="84" width="374" height="565"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-rE-geI">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="194.33333333333331"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-rE-geI">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="183"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIP-Ap-fI0">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="194.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="183"/>
                                                 <color key="backgroundColor" red="0.89811779382779533" green="1" blue="0.80556205304344453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hld-rl-IRI">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="194.33333333333331"/>
+                                                <rect key="frame" x="191" y="0.0" width="183" height="183"/>
                                                 <color key="backgroundColor" red="0.80435167996672086" green="1" blue="0.95795327258800289" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-cC-9h4">
-                                        <rect key="frame" x="0.0" y="194.33333333333331" width="374" height="194.33333333333337"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-cC-9h4">
+                                        <rect key="frame" x="0.0" y="191" width="374" height="183"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yht-dd-tol">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="194.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="183"/>
                                                 <color key="backgroundColor" red="0.94027802919581016" green="0.90087799590497042" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yht-dd-tol" secondAttribute="height" multiplier="1:1" id="3Qc-jA-b3c"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B59-8r-wgY">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="194.33333333333337"/>
+                                                <rect key="frame" x="191" y="0.0" width="183" height="183"/>
                                                 <color key="backgroundColor" red="1" green="0.93595051708075128" blue="0.92392800295864719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIB-YF-q8m">
-                                        <rect key="frame" x="0.0" y="388.66666666666674" width="374" height="194.33333333333326"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIB-YF-q8m">
+                                        <rect key="frame" x="0.0" y="382" width="374" height="183"/>
                                         <color key="backgroundColor" red="0.96518125175634784" green="1" blue="0.99790037073686133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -223,6 +228,11 @@
                             <constraint firstItem="usk-xE-81F" firstAttribute="trailing" secondItem="jpt-Lg-8li" secondAttribute="trailing" constant="20" id="obh-iv-cEY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="usk-xE-81F"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OKz-TU-gjC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GvL-ec-8B5"/>
                 </viewController>
