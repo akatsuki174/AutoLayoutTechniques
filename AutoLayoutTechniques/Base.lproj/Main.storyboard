@@ -223,16 +223,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jpt-Lg-8li" firstAttribute="leading" secondItem="usk-xE-81F" secondAttribute="leading" constant="20" id="HL6-LW-zg8"/>
-                            <constraint firstItem="usk-xE-81F" firstAttribute="bottom" secondItem="jpt-Lg-8li" secondAttribute="bottom" constant="20" id="OKz-TU-gjC"/>
+                            <constraint firstItem="usk-xE-81F" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jpt-Lg-8li" secondAttribute="bottom" constant="20" id="OKz-TU-gjC"/>
                             <constraint firstItem="jpt-Lg-8li" firstAttribute="top" secondItem="usk-xE-81F" secondAttribute="top" constant="20" id="cNu-iF-el6"/>
                             <constraint firstItem="usk-xE-81F" firstAttribute="trailing" secondItem="jpt-Lg-8li" secondAttribute="trailing" constant="20" id="obh-iv-cEY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="usk-xE-81F"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="OKz-TU-gjC"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="GvL-ec-8B5"/>
                 </viewController>
