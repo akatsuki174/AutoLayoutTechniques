@@ -11,6 +11,7 @@ import UIKit
 class ViewControllerTab1: UIViewController {
     
     @IBOutlet var wrappingView: UIView!
+    @IBOutlet weak var cardView: UIView!
     // weakを付けた場合、一度isActive = falseにしてしまうと制約がnilになってしまう
     // のでここではweakを外している。
     // 参考：https://stackoverflow.com/questions/38051879/why-weak-iboutlet-nslayoutconstraint-turns-to-nil-when-i-make-it-inactive
@@ -44,6 +45,26 @@ class ViewControllerTab1: UIViewController {
         
         UIView.animate(withDuration: 0.25) { 
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    func transform(for translation: CGPoint) -> CGAffineTransform {
+        let moveBy = CGAffineTransform(translationX: translation.x, y:  translation.y)
+        let rotation = -sin(translation.x / (cardView.frame.width * 4.0))
+        return moveBy.rotated(by: rotation)
+    }
+    
+    @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .changed:
+            let translation = sender.translation(in: cardView.superview)
+            cardView.transform = transform(for: translation)
+        case .ended:
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: [], animations: {
+                self.cardView.transform = .identity
+            }, completion: nil)
+        default:
+            break
         }
     }
 
