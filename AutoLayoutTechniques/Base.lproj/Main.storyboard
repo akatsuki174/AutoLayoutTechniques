@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="2288" y="-1005"/>
         </scene>
-        <!--Item 1-->
+        <!--SafeArea-->
         <scene sceneID="Chs-qo-NlV">
             <objects>
                 <viewController id="Weh-h1-0Dq" customClass="ViewControllerTab2" customModule="AutoLayoutTechniques" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,13 +164,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="GZE-RL-l5T"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="sUN-sa-nyN"/>
+                    <tabBarItem key="tabBarItem" title="SafeArea" id="sUN-sa-nyN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afh-Pi-6pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287" y="-320"/>
         </scene>
-        <!--Item-->
+        <!--Stack-->
         <scene sceneID="fm6-J2-tn1">
             <objects>
                 <viewController id="S9e-Q9-uJO" customClass="ViewControllerTab4" customModule="AutoLayoutTechniques" sceneMemberID="viewController">
@@ -243,13 +243,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VVN-Nn-9m9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="GvL-ec-8B5"/>
+                    <tabBarItem key="tabBarItem" title="Stack" id="GvL-ec-8B5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8L-cp-ZFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287" y="1111"/>
         </scene>
-        <!--Item-->
+        <!--Proportional-->
         <scene sceneID="YUo-qx-8nN">
             <objects>
                 <viewController id="DkW-su-uNK" customClass="ViewControllerTab3" customModule="AutoLayoutTechniques" customModuleProvider="target" sceneMemberID="viewController">
@@ -291,7 +291,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ShR-rx-6zw"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="p90-I9-5Ra"/>
+                    <tabBarItem key="tabBarItem" title="Proportional" id="p90-I9-5Ra"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiA-pD-unZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
