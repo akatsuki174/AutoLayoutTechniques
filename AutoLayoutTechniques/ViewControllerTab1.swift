@@ -12,6 +12,7 @@ class ViewControllerTab1: UIViewController {
     
     @IBOutlet var wrappingView: UIView!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var dynamicTypeLabel: UILabel!
     // weakを付けた場合、一度isActive = falseにしてしまうと制約がnilになってしまう
     // のでここではweakを外している。
     // 参考：https://stackoverflow.com/questions/38051879/why-weak-iboutlet-nslayoutconstraint-turns-to-nil-when-i-make-it-inactive
@@ -21,6 +22,18 @@ class ViewControllerTab1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setDynamicLabelFont()
+    }
+    
+    func setDynamicLabelFont() {
+        if #available(iOS 10.0, *) {
+            dynamicTypeLabel.adjustsFontForContentSizeCategory = true
+            dynamicTypeLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        } else {
+            NotificationCenter.default.addObserver(forName: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil, queue: nil, using: { _ in
+                self.dynamicTypeLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,5 +81,8 @@ class ViewControllerTab1: UIViewController {
         }
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
+    }
 }
 
