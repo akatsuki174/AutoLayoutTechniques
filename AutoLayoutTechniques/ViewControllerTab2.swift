@@ -9,14 +9,13 @@
 import UIKit
 
 class ViewControllerTab2: UIViewController {
-    private let sampleView = UIView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
     private func setupView() {
+        let sampleView = UIView()
         sampleView.translatesAutoresizingMaskIntoConstraints = false
         sampleView.backgroundColor = .brown
         view.addSubview(sampleView)
