@@ -30,6 +30,7 @@ class ViewControllerTab1: UIViewController {
             dynamicTypeLabel.adjustsFontForContentSizeCategory = true
             dynamicTypeLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         } else {
+            // 設定アプリで変更しても自動では変わらないのでNotificationで検知する
             NotificationCenter.default.addObserver(forName: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil, queue: nil, using: { _ in
                 self.dynamicTypeLabel.font = UIFont.preferredFont(forTextStyle: .headline)
             })

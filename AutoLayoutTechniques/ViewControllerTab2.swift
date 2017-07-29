@@ -28,7 +28,7 @@ class ViewControllerTab2: UIViewController {
         ])
         
         if #available(iOS 11, *) {
-            let guide = view.safeAreaLayoutGuide
+            let guide = view.safeAreaLayoutGuide // safeAreaLayoutGuide = iOS 11以降
             NSLayoutConstraint.activate([
                 sampleView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
                 guide.bottomAnchor.constraintEqualToSystemSpacingBelow(sampleView.bottomAnchor, multiplier: 1.0)
