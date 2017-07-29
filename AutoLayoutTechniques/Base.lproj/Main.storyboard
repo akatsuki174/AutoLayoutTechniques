@@ -150,6 +150,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="fzh-kX-yHm"/>
                     <connections>
                         <outlet property="cardView" destination="TlM-IT-5ti" id="MJw-bV-09w"/>
+                        <outlet property="dynamicTypeLabel" destination="0Fu-ZU-6Ms" id="31z-qG-AlW"/>
                         <outlet property="edgeConstraint" destination="nSa-9i-2OF" id="8yE-dH-qQZ"/>
                         <outlet property="topConstraint" destination="tQp-ZZ-DkS" id="Mhj-96-k4m"/>
                         <outlet property="wrappingView" destination="K7E-Sv-LnJ" id="hsJ-tZ-IDp"/>
